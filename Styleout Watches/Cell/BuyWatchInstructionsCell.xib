@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+        <array key="Roboto-Thin.ttf">
+            <string>Roboto-Thin</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="buyWatchInstructionsCellId" id="gTV-IL-0wX" customClass="BuyWatchInstructionsCell" customModule="Styleout_Watches" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8K-ao-bke">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buyWatch" translatesAutoresizingMaskIntoConstraints="NO" id="FQv-zm-s7V">
+                                <rect key="frame" x="30" y="20" width="240" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="C5Y-31-RCd"/>
+                                    <constraint firstAttribute="height" constant="100" id="P79-Sc-cgl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCi-sC-o3h">
+                                <rect key="frame" x="20" y="130" width="260" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="5fQ-1q-kv5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtW-47-8cg">
+                                <rect key="frame" x="20" y="160" width="260" height="16"/>
+                                <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dCi-sC-o3h" firstAttribute="top" secondItem="FQv-zm-s7V" secondAttribute="bottom" constant="10" id="0EW-bc-c5w"/>
+                            <constraint firstItem="YtW-47-8cg" firstAttribute="top" secondItem="dCi-sC-o3h" secondAttribute="bottom" constant="10" id="Hjd-XX-DfL"/>
+                            <constraint firstItem="YtW-47-8cg" firstAttribute="leading" secondItem="l8K-ao-bke" secondAttribute="leading" constant="20" id="cxi-Bs-vgn"/>
+                            <constraint firstAttribute="trailing" secondItem="YtW-47-8cg" secondAttribute="trailing" constant="20" id="hH7-2R-Ish"/>
+                            <constraint firstItem="dCi-sC-o3h" firstAttribute="leading" secondItem="l8K-ao-bke" secondAttribute="leading" constant="20" id="jYX-kP-16h"/>
+                            <constraint firstItem="FQv-zm-s7V" firstAttribute="top" secondItem="l8K-ao-bke" secondAttribute="top" constant="20" id="szS-Q8-uVb"/>
+                            <constraint firstAttribute="trailing" secondItem="dCi-sC-o3h" secondAttribute="trailing" constant="20" id="wpE-8k-ks5"/>
+                            <constraint firstItem="FQv-zm-s7V" firstAttribute="centerX" secondItem="l8K-ao-bke" secondAttribute="centerX" id="ync-OI-Awr"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="l8K-ao-bke" secondAttribute="trailing" id="MbW-un-2l4"/>
+                <constraint firstAttribute="bottom" secondItem="l8K-ao-bke" secondAttribute="bottom" id="YaU-M6-2d4"/>
+                <constraint firstItem="l8K-ao-bke" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nGu-Xo-Bbv"/>
+                <constraint firstItem="l8K-ao-bke" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="opm-U2-kFv"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="instructions" destination="dCi-sC-o3h" id="jq8-oM-YRl"/>
+                <outlet property="instructionsImage" destination="FQv-zm-s7V" id="iyu-L9-6a0"/>
+                <outlet property="subInstructions" destination="YtW-47-8cg" id="6xo-ZE-IDh"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="buyWatch" width="100" height="100"/>
+    </resources>
+</document>

@@ -1,0 +1,24 @@
+{
+  "additionalfilters": [
+    {
+      "id": 1,
+      "title": "Availability",
+      "parent_id": null
+    },
+    {
+      "id": 2,
+      "title": "Gender",
+      "parent_id": null
+    },
+    {
+      "id": 3,
+      "title": "Case Material",
+      "parent_id": null
+    },
+    {
+      "id": 4,
+      "title": "Case Diameter",
+      "parent_id": null
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "gender": [
+    {
+      "id": 1,
+      "title": "Men",
+      "parent_id": null
+    },
+    {
+      "id": 2,
+      "title": "Women",
+      "parent_id": null
+    }
+  ]
+}

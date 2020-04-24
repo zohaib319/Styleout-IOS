@@ -1,0 +1,46 @@
+{
+  "currencies": [
+    {
+      "id": 1,
+      "title": "Emirates Dirham",
+      "symbol": "AED"
+    },
+    {
+      "id": 2,
+      "title": "Euro",
+      "symbol": "€"
+    },
+    {
+      "id": 3,
+      "title": "Pound Sterling",
+      "symbol": "£"
+    },
+    {
+      "id": 4,
+      "title": "US Dollars",
+      "symbol": "$"
+    },
+    {
+      "id": 5,
+      "title": "Saudi Riyal",
+      "symbol": "SR"
+    },
+    {
+      "id": 6,
+      "title": "Israeli Shekel",
+      "symbol": "₪"
+    },
+    {
+      "id": 7,
+      "title": "Indian Rupee",
+      "symbol": "₹"
+    },
+    {
+      "id": 8,
+      "title": "Chinese Yuan",
+      "symbol": "¥"
+    }
+    
+    
+  ]
+}

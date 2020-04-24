@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="allWatchesCollectionCellId" id="gTV-IL-0wX" customClass="AllWatchesCollectioncell" customModule="Styleout_Watches" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="260"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="180" height="260"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9wj-wO-dmG">
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="260"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="watch" translatesAutoresizingMaskIntoConstraints="NO" id="aJz-W0-GJL">
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="5hs-82-aRZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patek Philippe Nautilus 5711/1P-001 Platinum 40th anniversary" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVl-tn-2yC">
+                                <rect key="frame" x="10" y="180" width="160" height="28"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKD-wh-Q8a">
+                                <rect key="frame" x="10" y="218" width="160" height="12"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="10"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="brandBackground"/>
+                        <constraints>
+                            <constraint firstItem="WVl-tn-2yC" firstAttribute="leading" secondItem="9wj-wO-dmG" secondAttribute="leading" constant="10" id="8rL-0g-iod"/>
+                            <constraint firstAttribute="trailing" secondItem="WVl-tn-2yC" secondAttribute="trailing" constant="10" id="G3t-Xb-6fF"/>
+                            <constraint firstAttribute="trailing" secondItem="aJz-W0-GJL" secondAttribute="trailing" id="JIF-h3-JzN"/>
+                            <constraint firstItem="aJz-W0-GJL" firstAttribute="leading" secondItem="9wj-wO-dmG" secondAttribute="leading" id="RNU-7f-61O"/>
+                            <constraint firstItem="WVl-tn-2yC" firstAttribute="top" secondItem="aJz-W0-GJL" secondAttribute="bottom" constant="10" id="Uoi-ac-2kU"/>
+                            <constraint firstAttribute="trailing" secondItem="pKD-wh-Q8a" secondAttribute="trailing" constant="10" id="ZH8-Qo-yiY"/>
+                            <constraint firstItem="pKD-wh-Q8a" firstAttribute="leading" secondItem="9wj-wO-dmG" secondAttribute="leading" constant="10" id="cZ8-YU-eE5"/>
+                            <constraint firstItem="aJz-W0-GJL" firstAttribute="top" secondItem="9wj-wO-dmG" secondAttribute="top" id="tek-ug-hNc"/>
+                            <constraint firstItem="pKD-wh-Q8a" firstAttribute="top" secondItem="WVl-tn-2yC" secondAttribute="bottom" constant="10" id="xsN-CH-27k"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="9wj-wO-dmG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1qQ-uU-Cgq"/>
+                <constraint firstItem="9wj-wO-dmG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ALa-PV-9VB"/>
+                <constraint firstAttribute="bottom" secondItem="9wj-wO-dmG" secondAttribute="bottom" id="Pbd-oY-6uO"/>
+                <constraint firstAttribute="trailing" secondItem="9wj-wO-dmG" secondAttribute="trailing" id="cdH-JQ-5pi"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="watch" width="1000" height="1000"/>
+        <namedColor name="brandBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

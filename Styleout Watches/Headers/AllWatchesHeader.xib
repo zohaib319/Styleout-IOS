@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="allWatchesHeaderId" id="gTV-IL-0wX" customClass="AllWatchesHeader" customModule="Styleout_Watches" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cL-1z-chN">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jip-He-D3E">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Jip-He-D3E" firstAttribute="top" secondItem="0cL-1z-chN" secondAttribute="top" id="207-DI-W2h"/>
+                            <constraint firstAttribute="bottom" secondItem="Jip-He-D3E" secondAttribute="bottom" id="DM8-sR-B8Z"/>
+                            <constraint firstAttribute="trailing" secondItem="Jip-He-D3E" secondAttribute="trailing" id="X1O-t0-35X"/>
+                            <constraint firstItem="Jip-He-D3E" firstAttribute="leading" secondItem="0cL-1z-chN" secondAttribute="leading" id="vwq-uD-ELQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="0cL-1z-chN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="8Gw-Bp-44g"/>
+                <constraint firstItem="0cL-1z-chN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Bgl-k0-cFz"/>
+                <constraint firstAttribute="trailing" secondItem="0cL-1z-chN" secondAttribute="trailing" id="IIo-SB-Plv"/>
+                <constraint firstAttribute="bottom" secondItem="0cL-1z-chN" secondAttribute="bottom" id="c9y-qc-THq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="headerTitle" destination="Jip-He-D3E" id="yal-jI-3ym"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </collectionViewCell>
+    </objects>
+</document>
