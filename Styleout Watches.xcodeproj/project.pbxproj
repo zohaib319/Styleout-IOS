@@ -58,6 +58,12 @@
 		FAACA1692452C815000A8722 /* currencies.json in Resources */ = {isa = PBXBuildFile; fileRef = FAACA1682452C815000A8722 /* currencies.json */; };
 		FAACA16B2452C986000A8722 /* CurrenciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACA16A2452C986000A8722 /* CurrenciesViewController.swift */; };
 		FAACA16D2452CF43000A8722 /* PrivacyPolicyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACA16C2452CF43000A8722 /* PrivacyPolicyController.swift */; };
+		FAACA19424530168000A8722 /* UserQuotationsGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACA19224530168000A8722 /* UserQuotationsGridCell.swift */; };
+		FAACA19524530168000A8722 /* UserQuotationsGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAACA19324530168000A8722 /* UserQuotationsGridCell.xib */; };
+		FAACA19824530409000A8722 /* UserQuotationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACA19624530409000A8722 /* UserQuotationListCell.swift */; };
+		FAACA19924530409000A8722 /* UserQuotationListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAACA19724530409000A8722 /* UserQuotationListCell.xib */; };
+		FAACA19C2453102A000A8722 /* UserQuotationsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACA19A2453102A000A8722 /* UserQuotationsHeader.swift */; };
+		FAACA19D2453102A000A8722 /* UserQuotationsHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAACA19B2453102A000A8722 /* UserQuotationsHeader.xib */; };
 		FAE0985C24515C630030A024 /* GetQuotationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE0985B24515C630030A024 /* GetQuotationController.swift */; };
 		FAE0985E2451986E0030A024 /* UserProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE0985D2451986E0030A024 /* UserProfileCell.swift */; };
 		FAE09860245199200030A024 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE0985F245199200030A024 /* UserProfileController.swift */; };
@@ -149,6 +155,12 @@
 		FAACA1682452C815000A8722 /* currencies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = currencies.json; sourceTree = "<group>"; };
 		FAACA16A2452C986000A8722 /* CurrenciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesViewController.swift; sourceTree = "<group>"; };
 		FAACA16C2452CF43000A8722 /* PrivacyPolicyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyController.swift; sourceTree = "<group>"; };
+		FAACA19224530168000A8722 /* UserQuotationsGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserQuotationsGridCell.swift; sourceTree = "<group>"; };
+		FAACA19324530168000A8722 /* UserQuotationsGridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserQuotationsGridCell.xib; sourceTree = "<group>"; };
+		FAACA19624530409000A8722 /* UserQuotationListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserQuotationListCell.swift; sourceTree = "<group>"; };
+		FAACA19724530409000A8722 /* UserQuotationListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserQuotationListCell.xib; sourceTree = "<group>"; };
+		FAACA19A2453102A000A8722 /* UserQuotationsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserQuotationsHeader.swift; sourceTree = "<group>"; };
+		FAACA19B2453102A000A8722 /* UserQuotationsHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserQuotationsHeader.xib; sourceTree = "<group>"; };
 		FAE0985B24515C630030A024 /* GetQuotationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetQuotationController.swift; sourceTree = "<group>"; };
 		FAE0985D2451986E0030A024 /* UserProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCell.swift; sourceTree = "<group>"; };
 		FAE0985F245199200030A024 /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
@@ -210,6 +222,8 @@
 				FA014986244F123500A3167B /* QuickFiltersHeader.xib */,
 				FAE7BBAB24504778005A1472 /* AllWatchesHeader.swift */,
 				FAE7BBAC24504778005A1472 /* AllWatchesHeader.xib */,
+				FAACA19A2453102A000A8722 /* UserQuotationsHeader.swift */,
+				FAACA19B2453102A000A8722 /* UserQuotationsHeader.xib */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
@@ -362,6 +376,10 @@
 				FAE0985D2451986E0030A024 /* UserProfileCell.swift */,
 				FAE098612451A3960030A024 /* UserProfileActionCell.swift */,
 				FAACA1642452BCBA000A8722 /* CurrenciesCell.swift */,
+				FAACA19224530168000A8722 /* UserQuotationsGridCell.swift */,
+				FAACA19324530168000A8722 /* UserQuotationsGridCell.xib */,
+				FAACA19624530409000A8722 /* UserQuotationListCell.swift */,
+				FAACA19724530409000A8722 /* UserQuotationListCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -433,12 +451,15 @@
 				FA1359A3243DE1D5005CB456 /* LaunchScreen.storyboard in Resources */,
 				FA6FCB09244700DD0034E578 /* AdditionalFiltersSubTitles.json in Resources */,
 				FA599AFD244DBA320030697D /* MainSliderCell.xib in Resources */,
+				FAACA19D2453102A000A8722 /* UserQuotationsHeader.xib in Resources */,
 				FA6FCB072446FAB00034E578 /* AdditionalFiltersTitles.json in Resources */,
 				FA2656A7244D846F00EE619A /* BuyWatchInstructionsCell.xib in Resources */,
 				FA1359A0243DE1D5005CB456 /* Assets.xcassets in Resources */,
 				FAE7BBAE24504778005A1472 /* AllWatchesHeader.xib in Resources */,
 				FA13599E243DE1D3005CB456 /* Main.storyboard in Resources */,
+				FAACA19924530409000A8722 /* UserQuotationListCell.xib in Resources */,
 				FA014988244F123500A3167B /* QuickFiltersHeader.xib in Resources */,
+				FAACA19524530168000A8722 /* UserQuotationsGridCell.xib in Resources */,
 				FAACA1692452C815000A8722 /* currencies.json in Resources */,
 				FAE7BBA6245036CF005A1472 /* AllWatchesCell.xib in Resources */,
 				FA01497F244EF94D00A3167B /* TopWatchesCollectionCell.xib in Resources */,
@@ -490,6 +511,7 @@
 				FA2656A9244D865400EE619A /* BuyWatchInstructionsModel.swift in Sources */,
 				FA13599B243DE1D3005CB456 /* ViewController.swift in Sources */,
 				FAE7BBAD24504778005A1472 /* AllWatchesHeader.swift in Sources */,
+				FAACA19C2453102A000A8722 /* UserQuotationsHeader.swift in Sources */,
 				FA036A10244444CA00AE195F /* OtherWatchesCollectionCell.swift in Sources */,
 				FAE51FF32445D75900F70D95 /* AllWatchesModel.swift in Sources */,
 				FAACA1612452B54A000A8722 /* UserProfileActionsModel.swift in Sources */,
@@ -500,6 +522,7 @@
 				FA2CD82C24419C1D0011F904 /* QuotationsTableViewCell.swift in Sources */,
 				FA6FCAFD2446DAD70034E578 /* AdditionalFiltersCell.swift in Sources */,
 				FAE7BBA5245036CF005A1472 /* AllWatchesCell.swift in Sources */,
+				FAACA19824530409000A8722 /* UserQuotationListCell.swift in Sources */,
 				FAACA1652452BCBA000A8722 /* CurrenciesCell.swift in Sources */,
 				FA0A77182441C46C008B8C4D /* QuotationsModel.swift in Sources */,
 				FA036A122444456300AE195F /* OtherWatchesModel.swift in Sources */,
@@ -531,6 +554,7 @@
 				FAE09860245199200030A024 /* UserProfileController.swift in Sources */,
 				FA2656A6244D846F00EE619A /* BuyWatchInstructionsCell.swift in Sources */,
 				FAE51FF52445FF7F00F70D95 /* FiltersViewController.swift in Sources */,
+				FAACA19424530168000A8722 /* UserQuotationsGridCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

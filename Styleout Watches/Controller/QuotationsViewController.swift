@@ -8,46 +8,76 @@
 
 import UIKit
 
-class QuotationsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-
-    @IBOutlet weak var quotationsTableView: UITableView!
-    var quotationsArray : [QuotationsModel] = []
+class QuotationsViewController: UIViewController {
     
+    @IBOutlet weak var changeDataTypeButton: UIBarButtonItem!
+    @IBOutlet weak var quotationsCollectionView: UICollectionView!{
+        didSet{
+            // Nibs Register
+            quotationsCollectionView.register(UINib(nibName: "UserQuotationsGridCell", bundle: .main), forCellWithReuseIdentifier: "userQuotationsGridCellId")
+            quotationsCollectionView.register(UINib(nibName: "UserQuotationListCell", bundle: .main), forCellWithReuseIdentifier: "userQuotationsListCellId")
+            
+            
+        }
+    }
+    var dataDisplayType: String = "Grid"
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // setting delegates and data source
-        quotationsTableView.delegate = self
-        quotationsTableView.dataSource = self
-        quotationsTableView.tableFooterView = UIView()
-//        fetchData()
+        quotationsCollectionView.delegate = self
+        quotationsCollectionView.dataSource = self
         
+        changeDataTypeButton.image = UIImage(named: "list_icon")
+        quotationsCollectionView.reloadData()
         
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return quotationsArray.count
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "quotationsCellId") as! QuotationsTableViewCell
+    
+    @IBAction func changeDataDisplayType(_ sender: Any) {
         
-        let item: QuotationsModel
-        item = quotationsArray[indexPath.row]
-        cell.setQuotation(quotation: item)
-        cell.selectionStyle = .none
-        return cell
-    }
-    func fetchData(){
-        let itemtoAppend = QuotationsModel(quotationId: 1, watchImage: "https://styleoutwatches.sirv.com/ap-mati-yWTN1/0MdhKkx7hDTHtEsd4NJ8oiroNbzIKSqHmNCLSgfH.png", watchName: "Audemers Piguet", brandName: "Audemers", quotationPrice: "829281282 AED", watchSeries: "Dont Know", quotationStatus: "In Progress")
-        let itemtoAppend2 = QuotationsModel(quotationId: 1, watchImage: "https://styleoutwatches.sirv.com/ap-mati-yWTN1/0MdhKkx7hDTHtEsd4NJ8oiroNbzIKSqHmNCLSgfH.png", watchName: "Audemers Piguet", brandName: "Audemers", quotationPrice: "829281282 AED", watchSeries: "Dont Know", quotationStatus: "In Progress")
-        let itemtoAppend3 = QuotationsModel(quotationId: 1, watchImage: "https://styleoutwatches.sirv.com/ap-mati-yWTN1/0MdhKkx7hDTHtEsd4NJ8oiroNbzIKSqHmNCLSgfH.png", watchName: "Audemers Piguet", brandName: "Audemers", quotationPrice: "829281282 AED", watchSeries: "Dont Know", quotationStatus: "In Progress")
+        if dataDisplayType == "List" {
+            dataDisplayType = "Grid"
+            changeDataTypeButton.image = UIImage(named: "list_icon")
+        }
+        else if dataDisplayType == "Grid"{
+            changeDataTypeButton.image = UIImage(named: "grid_icon")
+            dataDisplayType = "List"
+        }
         
-        quotationsArray.append(itemtoAppend)
-        quotationsArray.append(itemtoAppend2)
-        quotationsArray.append(itemtoAppend3)
-        
-        quotationsTableView.reloadData()
+        quotationsCollectionView.reloadData()
     }
+    
+    
+    
+}
+extension QuotationsViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if dataDisplayType == "List" {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "userQuotationsListCellId", for: indexPath) as! UserQuotationListCell
+            cell.dropShadow()
+            return cell
+        }
+        else{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "userQuotationsGridCellId", for: indexPath) as! UserQuotationsGridCell
+            cell.dropShadow()
+            return cell
+        }
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if dataDisplayType == "List" {
+            return CGSize(width: view.frame.width, height: 100)
+        }
+        else{
+            return CGSize(width: (view.frame.width / 2) - 15, height: 270)
+        }
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    }
+    
+    
+    
 }
